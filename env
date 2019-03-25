@@ -1,0 +1,51 @@
+#!/bin/bash
+BaseDir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+
+# Android sdk
+export ANDROID_HOME=$BaseDir/android/sdk
+
+# Chocolatey程序管理器
+export CHOCOLATEY_HOME=$BaseDir/chocolatey/
+
+# dotnet core
+export DOTNET_HOME=$BaseDir/dotnet/
+
+# GIT
+export GIT_HOME=$BaseDir/git/bin
+
+# JAVA
+export JAVA_HOME=$BaseDir/java/jdk1.8.0_202
+
+# MSBuild
+export MSBUILD_HOME=$BaseDir/msbuild/15.0/Bin
+
+# MsSql Client
+export MSSQL_CLIENT_HOME=$BaseDir/sqlcli
+
+# nodejs
+export NODE_HOME=$BaseDir/nodejs
+export NODE_PATH=$BaseDir/nodejs/node_modules
+export NVM_HOME=$BaseDir/nvm
+export NVM_SYMLINK=$BaseDir/nodejs
+
+# NUGET
+export NUGET_HOME=$BaseDir/nuget
+
+# Oracle
+export ORACLE_HOME=$BaseDir/oracle/instantclient_18_3_x64
+export NLS_LANG=AMERICAN_AMERICA.ZHS16GBK
+export TNS_ADMIN=$ORACLE_HOME$
+
+# PYTHON
+export PYTHON_HOME=$BaseDir/python/2.7
+
+# RUBY
+export RUBY_HOME=$BaseDir/ruby/ruby26
+
+# SVN
+export SVN_HOME=$BaseDir/svn
+
+echo 开发环境初始化完成, 2019/03/22 by Jover
+
+# PATH
+export PATH="$ANDROID_HOME/platform-tools;$ANDROID_HOME/tools;$CHOCOLATEY_HOME/bin;$DOTNET_HOME;$GIT_HOME;$JAVA_HOME;$MSBUILD_HOME;$MSBUILD_HOME/Roslyn;$MSSQL_CLIENT_HOME;$NODE_HOME;$NVM_HOME;$NVM_SYMLINK;$NUGET_HOME;$ORACLE_HOME;$PYTHON_HOME;$PYTHON_HOME/Scripts;$RUBY_HOME/bin;$SVN_HOME/bin;$PATH"

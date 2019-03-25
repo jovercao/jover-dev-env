@@ -25,10 +25,12 @@ choco install -y visualstudio2017buildtools
 @echo 正在安装dotnet文档生成工具docfx
 choco install -y docfx
 
+@echo 正在安装Python
+choco install -y python2
+choco install -y python3
+
 REM @echo 正在安装SVN
 REM choco install -y tortoisesvn
-REM @echo 正在安装Python
-REM choco install -y python
 REM @echo 正在安装vim
 REM choco install -y vim
 REM @echo 正在安装ruby
@@ -62,8 +64,8 @@ npm i -g vue-cli
 @echo 正在安装weex-toolkit
 npm i -g weex-toolkit
 
-@echo 正在安装nodejs windows 编译工具
-npm i -g windows-build-tools
+REM @echo 正在安装nodejs windows 编译工具
+REM npm i -g windows-build-tools
 
 
 
